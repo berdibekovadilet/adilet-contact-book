@@ -1,6 +1,8 @@
-import React, {
-    useState
-} from 'react';
+import React, {useState} from 'react';
+import { Button } from "antd";
+import "antd/dist/antd.css";
+import { Input } from 'antd';
+import { Row, Col } from 'antd';
 
 const AddContact = (props) => {
 
@@ -27,10 +29,20 @@ const AddContact = (props) => {
 
     return (
         <div>
-            <input onChange={(e) => setName(e.target.value)} placeholder="Имя" type="text"/>
-            <input onChange={(e) => setSurname(e.target.value)} placeholder="Фамилия" type="text"/>
-            <input onChange={(e) => setNumber(e.target.value)} placeholder="Номер телефона" type="text"/>
-            <button onClick={handleClick}>Добавить</button>
+            <Row>
+            <Col span={4}>
+                    <Input size="large" onChange={(e) => setName(e.target.value)} placeholder="Имя" type="text"/>
+             </Col>
+             <Col span={4}>
+                    <Input size="large" onChange={(e) => setSurname(e.target.value)} placeholder="Фамилия" type="text"/>
+             </Col>
+             <Col span={4}>
+                    <Input size="large" onChange={(e) => setNumber(e.target.value)} placeholder="Номер телефона" type="text"/>
+             </Col>
+             <Col span={4}> 
+                    <Button size="large" type="primary" onClick={handleClick}>Добавить</Button>
+             </Col>
+            </Row>
         </div>
     );
 };

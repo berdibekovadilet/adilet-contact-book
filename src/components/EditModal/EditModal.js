@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
 import './EditModal.css';
+import { Button } from "antd";
+import "antd/dist/antd.css";
+import { Input } from 'antd';
+import { Row, Col } from 'antd';
 
 const EditModal = (props) => {
   
@@ -26,9 +30,9 @@ const EditModal = (props) => {
         <div className='main-modal'>
         <div className='inner-modal'>
             <div className='close'>
-                <button>&times;</button>
+                <Button size="large" type="disabled" style={{marginBottom: 8}} onClick={handleSave}>&times;</Button>
             </div>
-            <input 
+            <Input 
                 onChange={(e) => setName(e.target.value)}
                 type='text' 
                 placeholder="Имя"
@@ -36,7 +40,7 @@ const EditModal = (props) => {
                 className='inp-edit'
              />
 
-            <input 
+            <Input 
                 onChange={(e) => setSurname(e.target.value)}
                 type='text' 
                 placeholder="Фамилия"
@@ -44,7 +48,7 @@ const EditModal = (props) => {
                 className='inp-edit'
              />
 
-            <input 
+            <Input 
                 onChange={(e) => setNumber(e.target.value)}
                 type='text' 
                 placeholder="Номер"
@@ -52,7 +56,7 @@ const EditModal = (props) => {
                 className='inp-edit'
              />
              
-            <button onClick={handleSave}>Save</button>
+            <Button size="large" type="primary" style={{marginTop: 8}}  onClick={handleSave}>Save</Button>
         </div>
     </div>
     );
