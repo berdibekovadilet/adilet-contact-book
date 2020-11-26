@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './EditModal.css';
-import { Button } from "antd";
 import "antd/dist/antd.css";
+import { Button } from "antd";
 import { Input } from 'antd';
-import { Row, Col } from 'antd';
+
 
 const EditModal = (props) => {
   
