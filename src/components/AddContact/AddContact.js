@@ -30,7 +30,7 @@ const AddContact = (props) => {
     return (
         <div>
             <Row justify="center" style={{marginTop: 80}}>
-            <Col span={4}>
+            <Col span={4} offset={2}>
                     <Input size="large" onChange={(e) => setName(e.target.value)} placeholder="Имя" type="text"/>
              </Col>
              <Col span={4}>

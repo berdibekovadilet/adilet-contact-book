@@ -22,7 +22,7 @@ const ContactList = (props) => {
              {props.contacts.map((item, index) =>  {
                 return (
                     <Row justify="center">
-                         <Col span={12} >
+                         <Col span={12}offset={5} >
                             <li style={{marginTop: 12}} key={item.id}>{item.name} {item.surname} {item.number}                        
                             <Button size="large" type="primary" style={{marginLeft: 8}} danger onClick={() => props.handleDelete(item.id)}>&times;</Button>
                             <Button size="large" type="primary" style={btnYellow} onClick={() => props.handleEdit(index)}>Изменить</Button>
