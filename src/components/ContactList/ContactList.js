@@ -23,7 +23,7 @@ const ContactList = (props) => {
                 return (
                     <Row justify="center">
                          <Col span={12} >
-                            <li style={{marginTop: 8}} key={item.id}>{item.name} {item.surname} {item.number}                        
+                            <li style={{marginTop: 12}} key={item.id}>{item.name} {item.surname} {item.number}                        
                             <Button size="large" type="primary" style={{marginLeft: 8}} danger onClick={() => props.handleDelete(item.id)}>&times;</Button>
                             <Button size="large" type="primary" style={btnYellow} onClick={() => props.handleEdit(index)}>Изменить</Button>
                             </li>
